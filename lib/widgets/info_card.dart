@@ -32,22 +32,24 @@ class InfoCard extends StatelessWidget {
             child: Column(
               children: <Widget>[
                 Padding(
-                  padding: const EdgeInsets.all(10.0),
+                  padding: const EdgeInsets.all(5.0),
                   child: Row(
                     children: <Widget>[
-                      Container(
-                        alignment: Alignment.center,
-                        height: 30,
-                        width: 30,
-                        decoration: BoxDecoration(
-                          color: iconColor.withOpacity(0.12),
-                          shape: BoxShape.circle,
-                        ),
-                        child: SvgPicture.asset(
-                          "assets/icons/running.svg",
-                          height: 12,
-                          width: 12,
-                          color: iconColor,
+                      Expanded(
+                        child: Container(
+                          alignment: Alignment.center,
+                          height: 30,
+                          width: 30,
+                          decoration: BoxDecoration(
+                            color: iconColor.withOpacity(0.12),
+                            shape: BoxShape.circle,
+                          ),
+                          child: SvgPicture.asset(
+                            "assets/icons/running.svg",
+                            height: 6,
+                            width: 6,
+                            color: iconColor,
+                          ),
                         ),
                       ),
                       SizedBox(width: 5),
@@ -60,7 +62,7 @@ class InfoCard extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(bottom: 10),
+                  padding: const EdgeInsets.only(bottom: 5),
                   child: Row(
                     children: <Widget>[
                       Padding(
@@ -79,7 +81,7 @@ class InfoCard extends StatelessWidget {
                               TextSpan(
                                 text: "People",
                                 style: TextStyle(
-                                  fontSize: 12,
+                                  fontSize: 10,
                                   height: 2,
                                 ),
                               ),

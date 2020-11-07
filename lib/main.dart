@@ -1,6 +1,7 @@
 import 'package:covid_19/constants.dart';
-import 'package:covid_19/screens/home_screen.dart';
+//import 'package:covid_19/screens/home_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:covid_19/screens/loading_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: kBackgroundColor,
         textTheme: Theme.of(context).textTheme.apply(displayColor: kTextColor),
       ),
-      home: HomeScreen(),
+      home: LoadingScreen(),
     );
   }
 }

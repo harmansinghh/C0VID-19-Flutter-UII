@@ -12,51 +12,53 @@ class DetailsScreen extends StatelessWidget {
         padding: EdgeInsets.symmetric(horizontal: 20),
         child: Column(
           children: <Widget>[
-            Container(
-              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 25),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(20),
-                boxShadow: [
-                  BoxShadow(
-                    offset: Offset(0, 21),
-                    blurRadius: 53,
-                    color: Colors.black.withOpacity(0.05),
-                  ),
-                ],
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  buildTitleWithMoreIcon(),
-                  SizedBox(height: 15),
-                  buildCaseNumber(context),
-                  SizedBox(height: 15),
-                  Text(
-                    "From Health Center",
-                    style: TextStyle(
-                      fontWeight: FontWeight.w200,
-                      color: kTextMediumColor,
-                      fontSize: 16,
+            Expanded(
+              child: Container(
+                padding: EdgeInsets.symmetric(horizontal: 20, vertical: 25),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(20),
+                  boxShadow: [
+                    BoxShadow(
+                      offset: Offset(0, 21),
+                      blurRadius: 53,
+                      color: Colors.black.withOpacity(0.05),
                     ),
-                  ),
-                  SizedBox(height: 15),
-                  WeeklyChart(),
-                  SizedBox(height: 15),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: <Widget>[
-                      buildInfoTextWithPercentage(
-                        percentage: "6.43",
-                        title: "From Last Week",
+                  ],
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    buildTitleWithMoreIcon(),
+                    SizedBox(height: 15),
+                    buildCaseNumber(context),
+                    SizedBox(height: 15),
+                    Text(
+                      "From Health Center",
+                      style: TextStyle(
+                        fontWeight: FontWeight.w200,
+                        color: kTextMediumColor,
+                        fontSize: 16,
                       ),
-                      buildInfoTextWithPercentage(
-                        percentage: "9.43",
-                        title: "Recovery Rate",
-                      ),
-                    ],
-                  )
-                ],
+                    ),
+                    SizedBox(height: 15),
+                    WeeklyChart(),
+                    SizedBox(height: 15),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        buildInfoTextWithPercentage(
+                          percentage: "6.43",
+                          title: "From Last Week",
+                        ),
+                        buildInfoTextWithPercentage(
+                          percentage: "9.43",
+                          title: "Recovery Rate",
+                        ),
+                      ],
+                    )
+                  ],
+                ),
               ),
             ),
             SizedBox(height: 20),

@@ -5,23 +5,25 @@ import 'package:flutter/material.dart';
 class WeeklyChart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return AspectRatio(
-      aspectRatio: 1.7,
-      child: BarChart(
-        BarChartData(
-          barGroups: getBarGroups(),
-          borderData: FlBorderData(show: false),
-          titlesData: FlTitlesData(
-            leftTitles: SideTitles(
-              showTitles: false,
-            ),
-            bottomTitles: SideTitles(
-              showTitles: true,
-              getTitles: getWeek,
-              textStyle: TextStyle(
-                color: Color(0xFF7589A2),
-                fontSize: 10,
-                fontWeight: FontWeight.w200,
+    return Expanded(
+      child: AspectRatio(
+        aspectRatio: 1.7,
+        child: BarChart(
+          BarChartData(
+            barGroups: getBarGroups(),
+            borderData: FlBorderData(show: false),
+            titlesData: FlTitlesData(
+              leftTitles: SideTitles(
+                showTitles: false,
+              ),
+              bottomTitles: SideTitles(
+                showTitles: true,
+                getTitles: getWeek,
+                textStyle: TextStyle(
+                  color: Color(0xFF7589A2),
+                  fontSize: 20,
+                  fontWeight: FontWeight.w200,
+                ),
               ),
             ),
           ),
